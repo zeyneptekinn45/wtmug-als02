@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4f46e5">
+  <meta name="description" content="Örnek PWA uygulaması">
+  
+  <title>PWA Demo</title>
+  
+  <!-- Manifest -->
+  <link rel="manifest" href="manifest.json">
+  
+  <!-- iOS için -->
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+    p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 2rem; }
+    button {
+      padding: 12px 24px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background: white;
+      color: #4f46e5;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    button:hover { transform: scale(1.05); }
+    #status {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <h1>🚀 PWA Demo</h1>
+  <p>Bu uygulama çevrimdışı da çalışır!</p>
+  <button id="installBtn" style="display:none;">📲 Yükle</button>
+  <div id="status">Durum: <span id="onlineStatus">Kontrol ediliyor...</span></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
